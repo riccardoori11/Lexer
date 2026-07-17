@@ -17,21 +17,14 @@ enum class TokenType{
 		ILLEGAL
 
 };
-namespace ricc{
-class Token{
 
-		private:
-				TokenType tokentype;
-				// the actual source text
-				std::string_view text;
+struct Token{
 
-		public:
-				
-				Token(TokenType tokentype, std::string text):tokentype(tokentype),text(text)
-		{
-		}
+		TokenType tokentype;
+		std::string text;
+
+		Token(TokenType tokentype, std::string text):tokentype(tokentype),text(std::move(text)){};
 
 };
-}
 
 

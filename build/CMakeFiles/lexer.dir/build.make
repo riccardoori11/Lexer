@@ -72,28 +72,28 @@ include CMakeFiles/lexer.dir/flags.make
 CMakeFiles/lexer.dir/codegen:
 .PHONY : CMakeFiles/lexer.dir/codegen
 
-CMakeFiles/lexer.dir/token.cpp.o: CMakeFiles/lexer.dir/flags.make
-CMakeFiles/lexer.dir/token.cpp.o: /home/riccardo/compiler/token.cpp
-CMakeFiles/lexer.dir/token.cpp.o: CMakeFiles/lexer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/riccardo/compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lexer.dir/token.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lexer.dir/token.cpp.o -MF CMakeFiles/lexer.dir/token.cpp.o.d -o CMakeFiles/lexer.dir/token.cpp.o -c /home/riccardo/compiler/token.cpp
+CMakeFiles/lexer.dir/main.cpp.o: CMakeFiles/lexer.dir/flags.make
+CMakeFiles/lexer.dir/main.cpp.o: /home/riccardo/compiler/main.cpp
+CMakeFiles/lexer.dir/main.cpp.o: CMakeFiles/lexer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/riccardo/compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lexer.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lexer.dir/main.cpp.o -MF CMakeFiles/lexer.dir/main.cpp.o.d -o CMakeFiles/lexer.dir/main.cpp.o -c /home/riccardo/compiler/main.cpp
 
-CMakeFiles/lexer.dir/token.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lexer.dir/token.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/riccardo/compiler/token.cpp > CMakeFiles/lexer.dir/token.cpp.i
+CMakeFiles/lexer.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lexer.dir/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/riccardo/compiler/main.cpp > CMakeFiles/lexer.dir/main.cpp.i
 
-CMakeFiles/lexer.dir/token.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lexer.dir/token.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/riccardo/compiler/token.cpp -o CMakeFiles/lexer.dir/token.cpp.s
+CMakeFiles/lexer.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lexer.dir/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/riccardo/compiler/main.cpp -o CMakeFiles/lexer.dir/main.cpp.s
 
 # Object files for target lexer
 lexer_OBJECTS = \
-"CMakeFiles/lexer.dir/token.cpp.o"
+"CMakeFiles/lexer.dir/main.cpp.o"
 
 # External object files for target lexer
 lexer_EXTERNAL_OBJECTS =
 
-lexer: CMakeFiles/lexer.dir/token.cpp.o
+lexer: CMakeFiles/lexer.dir/main.cpp.o
 lexer: CMakeFiles/lexer.dir/build.make
 lexer: CMakeFiles/lexer.dir/compiler_depend.ts
 lexer: CMakeFiles/lexer.dir/link.txt
