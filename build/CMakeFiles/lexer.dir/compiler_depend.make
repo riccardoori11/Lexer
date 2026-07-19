@@ -144,6 +144,7 @@ CMakeFiles/lexer.dir/main.cpp.o: /home/riccardo/compiler/main.cpp \
   /usr/include/c++/15/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/15/bits/stl_iterator_base_types.h \
   /usr/include/c++/15/bits/stl_pair.h \
+  /usr/include/c++/15/bits/stl_relops.h \
   /usr/include/c++/15/bits/stl_tempbuf.h \
   /usr/include/c++/15/bits/streambuf.tcc \
   /usr/include/c++/15/bits/streambuf_iterator.h \
@@ -199,6 +200,7 @@ CMakeFiles/lexer.dir/main.cpp.o: /home/riccardo/compiler/main.cpp \
   /usr/include/c++/15/tuple \
   /usr/include/c++/15/type_traits \
   /usr/include/c++/15/typeinfo \
+  /usr/include/c++/15/utility \
   /usr/include/c++/15/x86_64-redhat-linux/bits/atomic_word.h \
   /usr/include/c++/15/x86_64-redhat-linux/bits/c++allocator.h \
   /usr/include/c++/15/x86_64-redhat-linux/bits/c++config.h \
@@ -263,6 +265,8 @@ lexer: /lib64/ld-linux-x86-64.so.2 \
 
 
 CMakeFiles/lexer.dir/main.cpp.o:
+
+/usr/lib/gcc/x86_64-redhat-linux/15/libstdc++.so:
 
 /usr/include/c++/15/bits/range_access.h:
 
@@ -340,6 +344,8 @@ CMakeFiles/lexer.dir/main.cpp.o:
 
 /usr/include/c++/15/backward/binders.h:
 
+/usr/include/c++/15/utility:
+
 /usr/include/c++/15/array:
 
 /usr/include/c++/15/bits/ranges_util.h:
@@ -403,8 +409,6 @@ CMakeFiles/lexer.dir/main.cpp.o:
 /home/riccardo/compiler/main.cpp:
 
 /usr/include/c++/15/bits/max_size_type.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/15/libstdc++.so:
 
 /usr/include/bits/uintn-identity.h:
 
@@ -576,6 +580,8 @@ CMakeFiles/lexer.dir/main.cpp.o:
 
 /usr/include/c++/15/bits/stl_algo.h:
 
+/usr/include/c++/15/bits/stl_relops.h:
+
 /usr/include/c++/15/bits/stl_algobase.h:
 
 /usr/include/c++/15/clocale:
@@ -645,6 +651,10 @@ CMakeFiles/lexer.dir/main.cpp.o:
 /usr/include/c++/15/ext/alloc_traits.h:
 
 /usr/include/linux/types.h:
+
+/usr/lib64/libc_nonshared.a:
+
+/usr/include/c++/15/ext/numeric_traits.h:
 
 /usr/include/c++/15/ext/string_conversions.h:
 
@@ -773,7 +783,3 @@ CMakeFiles/lexer.dir/main.cpp.o:
 /usr/include/c++/15/compare:
 
 /usr/lib/gcc/x86_64-redhat-linux/15/libgcc_s.so:
-
-/usr/include/c++/15/ext/numeric_traits.h:
-
-/usr/lib64/libc_nonshared.a:

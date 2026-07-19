@@ -14,7 +14,8 @@ enum class TokenType{
 		MINUS,
 		SEMICOLON,
 		ENDOFFILE,
-		ILLEGAL
+		ILLEGAL,
+		MULTIPLICATION
 
 };
 

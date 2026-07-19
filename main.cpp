@@ -1,9 +1,9 @@
 #include "lexxer.hpp"
 #include <format>
 
-std::string TokenTypename(TokenType t){
+std::string Convert_type_to_str(Token t){
 
-		switch (t){
+		switch (t.tokentype){
 				case TokenType::ENDOFFILE:
 						return "END OF FILE";
 				case TokenType::PLUS:
@@ -18,33 +18,34 @@ std::string TokenTypename(TokenType t){
 						return "EQUAL";
 				case TokenType::MINUS:
 						return "MINUS";
-
+				case TokenType::MULTIPLICATION:
+						return "MULTIPLY";
+				case TokenType::ILLEGAL:
+						return "ILLEGAL";
 		}
-
-		return "ILLEGAL";
+		return "";
+		
 }
 
-int main(){
-
-		ricc::lexxer lexxer{"int x = 5;"};
+auto printToken(ricc::lexxer lex){
 
 		while(true){
 
-				Token token = lexxer.nextToken();
+				Token token = lex.nextToken();
 
-				std::string message(std::format("{} is of TokenType {}", token.text,TokenTypename(token.tokentype))
-
-								);
-				  
-				std::cout << message << std::endl;
-
+				std::cout << Convert_type_to_str(token) << " {"<< token.text << "} " << std::endl;
 				if (token.tokentype == TokenType::ENDOFFILE){
 
 						break;
 				}
 		}
+}
 
+int main(){
+
+		ricc::lexxer a{"int x = 5;"};
 		
+		printToken(a);
 
 		return 0;
 }

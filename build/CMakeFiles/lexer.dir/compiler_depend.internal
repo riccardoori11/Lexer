@@ -145,6 +145,7 @@ CMakeFiles/lexer.dir/main.cpp.o
  /usr/include/c++/15/bits/stl_iterator_base_funcs.h
  /usr/include/c++/15/bits/stl_iterator_base_types.h
  /usr/include/c++/15/bits/stl_pair.h
+ /usr/include/c++/15/bits/stl_relops.h
  /usr/include/c++/15/bits/stl_tempbuf.h
  /usr/include/c++/15/bits/streambuf.tcc
  /usr/include/c++/15/bits/streambuf_iterator.h
@@ -200,6 +201,7 @@ CMakeFiles/lexer.dir/main.cpp.o
  /usr/include/c++/15/tuple
  /usr/include/c++/15/type_traits
  /usr/include/c++/15/typeinfo
+ /usr/include/c++/15/utility
  /usr/include/c++/15/x86_64-redhat-linux/bits/atomic_word.h
  /usr/include/c++/15/x86_64-redhat-linux/bits/c++allocator.h
  /usr/include/c++/15/x86_64-redhat-linux/bits/c++config.h
