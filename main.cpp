@@ -1,5 +1,4 @@
 #include "lexxer.hpp"
-#include <format>
 
 std::string Convert_type_to_str(Token t){
 
@@ -22,6 +21,14 @@ std::string Convert_type_to_str(Token t){
 						return "MULTIPLY";
 				case TokenType::ILLEGAL:
 						return "ILLEGAL";
+				case TokenType::INT:
+						return "INTEGER";
+				case TokenType::BOOL:
+						return "BOOL";
+				case TokenType::DOUBLE:
+						return "DOUBLE";
+				case TokenType::COMPARE:
+						return "COMPARE";
 		}
 		return "";
 		
@@ -43,7 +50,7 @@ auto printToken(ricc::lexxer lex){
 
 int main(){
 
-		ricc::lexxer a{"int x = 5;"};
+		ricc::lexxer a{"return 1 == 2"};
 		
 		printToken(a);
 

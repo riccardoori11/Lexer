@@ -3,7 +3,6 @@
 #include <string>
 #include <iostream>
 
-// int x = 4 + 5;
 
 enum class TokenType{
 
@@ -15,15 +14,18 @@ enum class TokenType{
 		SEMICOLON,
 		ENDOFFILE,
 		ILLEGAL,
-		MULTIPLICATION
-
+		MULTIPLICATION,
+		INT,
+		BOOL,
+		DOUBLE,
+		COMPARE
 };
 
 struct Token{
 
 		TokenType tokentype;
 		std::string text;
-
+		
 		Token(TokenType tokentype, std::string text):tokentype(tokentype),text(std::move(text)){};
 
 };

@@ -2,6 +2,7 @@
 #include <utility>
 #include <iostream>
 #include "token.hpp"
+#include <unordered_map>
 
 namespace ricc{
 
@@ -10,6 +11,14 @@ namespace ricc{
 private:
 		std::string input = "";
 		std::size_t pos{};
+
+		inline static const std::unordered_map<std::string, TokenType> keywords{
+				{"int", TokenType::INT},
+				{"bool", TokenType::BOOL},
+				{"double", TokenType::DOUBLE},
+
+		};
+		
 		
 		static constexpr bool is_digit(char c){
 
@@ -39,7 +48,14 @@ private:
 						++pos;
 				}
 				
-				return Token(TokenType::IDENTIFIER,input.substr(start,pos-start));
+				std::string id{input.substr(start,pos-start)};
+
+				auto it = keywords.find(id);
+				if (it != keywords.end()){
+						return Token(it->second,id);
+				}
+				
+				return Token(TokenType::IDENTIFIER,std::move(id));
 		}
 
 		Token readInteger(){
@@ -103,7 +119,14 @@ Token nextToken(){
 				
 				switch (input[start]){
 						case '=':
-								return {Token(TokenType::EQUAL, input.substr(start,1))};
+								if (input[pos] == '='){
+										pos++;
+										return {Token(TokenType::COMPARE, input.substr(start,2))}; 
+								}
+								else{
+										return {Token(TokenType::EQUAL, input.substr(start,1))};
+								}
+								
 						case '+':
 								return {Token(TokenType::PLUS, input.substr(start,1))};
 
@@ -112,6 +135,10 @@ Token nextToken(){
 
 						case ';':
 								return {Token(TokenType::SEMICOLON, input.substr(start,1))};
+						case '*':
+								return {Token(TokenType::MULTIPLICATION, input.substr(start,1))};
+						case '/':
+								return {Token(TokenType::MULTIPLICATION, input.substr(start,1))};
 						default:
 								return {Token(TokenType::ILLEGAL, input.substr(start,1))};
 						

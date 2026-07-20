@@ -1,4 +1,6 @@
 #include <string>
+#include "token.hpp"
+#include <vector>
 
 class Node{
 
@@ -22,8 +24,22 @@ public:
 		~Expression() override = default;
 };
 
-struct Program{
+class Program{
 
-		Statement[] Statements;
+public:
+		std::vector<Statement> Statements;
 
 };
+
+class ExpressionDeclaration: public Statement{
+
+		public:
+
+				Token token;
+
+
+};
+
+
+std::string TokenLiteral(Program* p);
+

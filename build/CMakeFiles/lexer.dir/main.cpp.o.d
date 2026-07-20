@@ -160,4 +160,11 @@ CMakeFiles/lexer.dir/main.cpp.o: /home/riccardo/compiler/main.cpp \
  /usr/include/c++/15/bits/stl_heap.h \
  /usr/include/c++/15/bits/uniform_int_dist.h \
  /usr/include/c++/15/bits/stl_tempbuf.h \
- /usr/include/c++/15/bits/unicode-data.h
+ /usr/include/c++/15/bits/unicode-data.h \
+ /usr/include/c++/15/unordered_map \
+ /usr/include/c++/15/bits/unordered_map.h \
+ /usr/include/c++/15/bits/hashtable.h \
+ /usr/include/c++/15/bits/hashtable_policy.h \
+ /usr/include/c++/15/ext/aligned_buffer.h \
+ /usr/include/c++/15/bits/node_handle.h \
+ /usr/include/c++/15/bits/erase_if.h
