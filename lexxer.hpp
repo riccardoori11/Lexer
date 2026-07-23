@@ -4,7 +4,6 @@
 #include "token.hpp"
 #include <unordered_map>
 
-namespace ricc{
 
 		class lexxer{
 
@@ -149,6 +148,6 @@ Token nextToken(){
 		return Token(TokenType::ENDOFFILE,{});
 		}
 		};
-}
+
 
 

@@ -1,0 +1,67 @@
+#include "lexxer.hpp"
+#include "ast.hpp"
+#include "token.hpp"
+#include <memory>
+#include <utility>
+
+namespace ricc{
+class Parser{
+
+private:
+		lexxer l;
+		Token curr_tok;
+		Token next_tok;
+
+		void nextToken(){
+
+				curr_tok = std::move(next_tok);
+				next_tok = l.nextToken();
+		}
+
+		bool current_type_is(TokenType type){
+
+				return curr_tok.tokentype == type;
+		}
+
+		std::unique_ptr<VariableDeclaration> parseVariableDeclaration(){
+
+				auto declaration = std::make_unique()
+		}
+		std::unique_ptr<Statement> parseStatement(){
+
+				switch (curr_tok.tokentype){
+
+						case TokenType::INT:
+								return parseVariableDeclaration();
+				}
+		}
+
+public:
+
+
+		Parser(lexxer lexer):l(std::move(lexer)),curr_tok(std::move(l.nextToken())),next_tok(std::move(l.nextToken()))
+		{
+
+		}
+		std::unique_ptr<Program> ParseProgram(){
+
+				auto program = std::make_unique<Program>();
+
+				while (current_type_is(TokenType::ENDOFFILE)){
+
+						auto statement = parseStatement(); 
+						if (statement){
+
+								program->statements.push_back(std::move(statement));
+								
+						}
+						nextToken();
+				}
+
+				return program;
+
+		};
+
+};
+
+}

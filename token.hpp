@@ -1,8 +1,5 @@
-#include <cstdio>
-#include <format>
-#include <string>
 #include <iostream>
-
+#pragma once
 
 enum class TokenType{
 
@@ -21,6 +18,8 @@ enum class TokenType{
 		COMPARE
 };
 
+
+
 struct Token{
 
 		TokenType tokentype;
@@ -29,5 +28,6 @@ struct Token{
 		Token(TokenType tokentype, std::string text):tokentype(tokentype),text(std::move(text)){};
 
 };
+
 
 
