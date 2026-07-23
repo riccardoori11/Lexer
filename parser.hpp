@@ -23,9 +23,34 @@ private:
 				return curr_tok.tokentype == type;
 		}
 
+		bool next_type_is(TokenType type){
+
+				return next_tok.tokentype == type;
+		}
+
+		std::unique_ptr<Expression> ParseExpression(){}
+
 		std::unique_ptr<VariableDeclaration> parseVariableDeclaration(){
 
-				auto declaration = std::make_unique()
+				auto declaration = std::make_unique<VariableDeclaration>(curr_tok);
+				if (!next_type_is(TokenType::IDENTIFIER)){
+
+						return nullptr;
+				}
+				nextToken();
+
+				declaration->name = std::make_unique<Identifier>(curr_tok,curr_tok.text);
+
+				if (!next_type_is(TokenType::EQUAL)){
+
+						return nullptr;
+				}
+				nextToken();
+				nextToken();
+
+				declaration->value = ParseExpression();
+
+
 		}
 		std::unique_ptr<Statement> parseStatement(){
 

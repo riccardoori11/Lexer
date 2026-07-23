@@ -17,7 +17,6 @@ public:
 class Statement: public Node{
 public:
 		~Statement() override = default;
-		virtual void statementNode(){};
 		
 };
 
@@ -26,7 +25,6 @@ class Expression: public Node{
 
 public:
 
-		virtual void expressionNode() {};
 		~Expression() override = default;
 };
 
@@ -48,30 +46,45 @@ public:
 
 };
 
-class VariableDeclaration: public Statement{
-
-		public:
-				Token token;
-				Token name;
-				std::unique_ptr<Expression> value;
-				
-		void statementNode() override {};
-		std::string TokenLiteral() const override{
-
-				return token.text;
-		};
-
-
-};
-
 class Identifier: public Expression{
 
 		public:
 				Token token;
 				std::string value;
 
-		void expressionNode() override {};
+		Identifier(Token token, std::string value):token(std::move(token)),value(std::move(value))
+		{
+		}
+
+		std::string TokenLiteral() const override{
+				return token.text;
+		}
+
+
 };
+
+class VariableDeclaration: public Statement{
+
+		public:
+				Token token;
+				
+				std::unique_ptr<Identifier> name;
+				std::unique_ptr<Expression> value;
+
+
+		VariableDeclaration(Token token):token(std::move(token)){
+
+		}
+				
+		std::string TokenLiteral() const override{
+
+				return token.text;
+		};
+
+
+
+};
+
 
 
 
